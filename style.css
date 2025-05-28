@@ -1,0 +1,416 @@
+/* Reset & base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+
+  /* Background image only */
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #bbdefb; /* fallback color */
+}
+
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #e3f2fd, #0d47a1); /* replaced purple gradient with blue */
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(13, 71, 161, 0.3); /* purple shadow replaced with blue */
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+nav {
+  margin-top: 0.8rem;
+}
+
+nav a {
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  color: #0d47a1; /* replaced purple with blue */
+}
+
+nav a:hover {
+  border-color: #42a5f5; /* lighter blue hover */
+  color: #42a5f5;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(13, 71, 161, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 15px 35px rgba(13, 71, 161, 0.2);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d47a1; /* blue instead of purple */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* About Me */
+#about-me p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.3rem;
+}
+
+/* Projects and Skills layout */
+.project-list, .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.project, .skill {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* blue gradient instead of purple */
+  padding: 25px;
+  flex: 1 1 260px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.project:hover, .skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(13, 71, 161, 0.3);
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #08306b; /* dark blue */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.skill {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #08306b;
+  text-align: center;
+  user-select: none;
+}
+
+/* Contact */
+.contact p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.contact a {
+  font-weight: 700;
+  color: #1565c0; /* blue link */
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contact a:hover {
+  border-color: #1565c0;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #1976d2, #0d47a1); /* blue gradient footer */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-weight: 600;
+  box-shadow: 0 -4px 8px rgba(13, 71, 161, 0.3);
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .project-list, .skill-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}
+
+/* Learning Journey Card */
+.learning-journey-card {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(13, 71, 161, 0.2);
+  margin-bottom: 2rem;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-journey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(13, 71, 161, 0.3);
+}
+
+.learning-journey-card h2 {
+  color: #0d47a1;
+  margin-top: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.learning-journey-card p {
+  color: #fefefe;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.goal-card {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(13, 71, 161, 0.15);
+  color: white;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(13, 71, 161, 0.25);
+}
+
+.goal-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Hero Section Styling */
+.hero {
+  background: linear-gradient(135deg, #e3f2fd, #0d47a1);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Hamburger styles */
+.hamburger, .close-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
+
+/* Mobile nav styles */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #0d47a1; /* replaced #333 with dark blue for nav bg */
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+
+  nav a {
+    color: white;
+    padding: 0.5rem 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .close-menu.show {
+    display: block;
+  }
+}
+
+/* Responsive adjustments for tablets and phones */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    margin-right: 3rem; /* room for hamburger */
+  }
+
+  /* Hamburger visible on small screens */
+  .hamburger {
+    display: block;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #0d47a1; /* dark blue instead of #333 */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .close-menu.show {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+  }
+
+  .project-list, .skill-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  section {
+    padding: 25px 15px;
+    margin-bottom: 40px;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .learning-journey-card,
+  .goal-card {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .project h3,
+  .skill {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px 10px;
+  }
+}
